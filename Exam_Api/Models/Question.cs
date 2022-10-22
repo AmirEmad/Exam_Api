@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Exam_Api.Models
@@ -13,9 +14,8 @@ namespace Exam_Api.Models
         public int Id { get; set; }
         public string Question1 { get; set; } = null!;
         public int AnswerId { get; set; }
-
-        public virtual Answer Answer { get; set; } = null!;
-
-        public virtual ICollection<ExamTitle> Exams { get; set; }
+        
+        public virtual Answer? Answer { get; set; } = null!;
+        public virtual ICollection<ExamTitle>? Exams { get; set; }
     }
 }

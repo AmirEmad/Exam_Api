@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Exam_Api.Models
@@ -12,7 +13,7 @@ namespace Exam_Api.Models
 
         public int Id { get; set; }
         public string Answer1 { get; set; } = null!;
-
-        public virtual ICollection<Question> Questions { get; set; }
+        
+        public virtual ICollection<Question>? Questions { get; set; }
     }
 }

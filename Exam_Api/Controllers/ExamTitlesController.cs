@@ -2,6 +2,7 @@
 using Exam_Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 
 namespace Exam_Api.Controllers
 {
@@ -21,7 +22,12 @@ namespace Exam_Api.Controllers
         {
             return Ok(await _services.GetAllAsync());
         }
-        
+        [HttpGet("{id}")]
+        public IActionResult GetExamTitlesAsync(int id)
+        {
+            return Ok(_services.GetById(id));
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateExamAsync(ExamTitle examTitle)
         {

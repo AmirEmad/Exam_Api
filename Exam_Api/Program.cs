@@ -2,6 +2,7 @@ using Exam_Api.Models;
 using Microsoft.EntityFrameworkCore;
 using Exam_Api.Controllers;
 using Exam_Api.Services;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
